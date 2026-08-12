@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Apex Delivery</title>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif; background-color: #f8f9fb;">
+
+   <section class="relative min-h-screen overflow-hidden">
+
+    <!-- ================= HERO IMAGE ================= -->
+    <!-- الصورة كتبان غير فـ Desktop -->
+    <img
+        src="images/hero.png"
+        alt="Hero"
+        class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+        style="object-position: center 40%;"
+    >
+
+
+    <!-- ================= NAVBAR ================= -->
+    <nav
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+
+        <div
+            class="flex items-center justify-between
+                   px-6 lg:px-10
+                   h-20 lg:h-24"
+        >
+
+            <!-- Logo -->
+            <img
+                src="images/logo1.png"
+                alt="Logo"
+                class="w-36 sm:w-40 lg:w-48 h-auto"
+            >
+
+
+            <!-- ================= DESKTOP MENU ================= -->
+            <ul
+                class="hidden lg:flex items-center gap-8
+                       font-semibold text-[13px]
+                       text-[#021956]"
+            >
+
+                <li>
+                    <a
+                        href="#"
+                        class="text-[#f47419]
+                               border-b-2
+                               border-[#f47419]
+                               pb-1"
+                    >
+                        ACCUEIL
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#services"
+                        class="hover:text-[#f47419] transition"
+                    >
+                        SERVICES
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#zones"
+                        class="hover:text-[#f47419] transition"
+                    >
+                        ZONE
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#about"
+                        class="hover:text-[#f47419] transition"
+                    >
+                        A PROPOS
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contact"
+                        class="hover:text-[#f47419] transition"
+                    >
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- ================= DESKTOP CONTACT ================= -->
+            <div class="hidden lg:flex items-center gap-6">
+
+                <!-- Phone -->
+                <a
+                    href="tel:0665430041"
+                    class="flex items-center gap-2
+                           text-[#021956]
+                           font-semibold text-[13px]"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        0665 43 00 41
+                    </span>
+
+                </a>
+
+
+                <!-- WhatsApp -->
+                <a
+                    href="https://wa.me/212665430041"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2
+                           px-4 py-2
+                           rounded-lg
+                           text-white
+                           text-[13px]
+                           bg-[#f78635]
+                           hover:bg-[#011463]
+                           hover:scale-105
+                           transition-all duration-300"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- ================= MOBILE BUTTON ================= -->
+            <button
+                id="menu-btn"
+                type="button"
+                class="lg:hidden
+                       text-3xl
+                       text-[#021956]
+                       focus:outline-none"
+            >
+
+                <i
+                    id="menu-icon"
+                    class="fa-solid fa-bars"
+                ></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= MOBILE MENU ================= -->
+        <div
+            id="mobile-menu"
+            class="hidden
+                   lg:hidden
+                   absolute
+                   top-20
+                   left-0
+                   w-full
+                   bg-white
+                   shadow-xl"
+        >
+
+            <ul class="flex flex-col py-5">
+
+                <!-- ACCUEIL -->
+                <li>
+                    <a
+                        href="#"
+                        class="block
+                               px-6
+                               py-3
+                               text-[#f47419]
+                               font-semibold"
+                    >
+                        ACCUEIL
+                    </a>
+                </li>
+
+
+                <!-- SERVICES -->
+                <li>
+                    <a
+                        href="#services"
+                        class="block
+                               px-6
+                               py-3
+                               text-[#021956]
+                               hover:bg-gray-100
+                               hover:text-[#f47419]
+                               transition"
+                    >
+                        SERVICES
+                    </a>
+                </li>
+
+
+                <!-- ZONE -->
+                <li>
+                    <a
+                        href="#zones"
+                        class="block
+                               px-6
+                               py-3
+                               text-[#021956]
+                               hover:bg-gray-100
+                               hover:text-[#f47419]
+                               transition"
+                    >
+                        ZONE
+                    </a>
+                </li>
+
+
+                <!-- A PROPOS -->
+                <li>
+                    <a
+                        href="#about"
+                        class="block
+                               px-6
+                               py-3
+                               text-[#021956]
+                               hover:bg-gray-100
+                               hover:text-[#f47419]
+                               transition"
+                    >
+                        A PROPOS
+                    </a>
+                </li>
+
+
+                <!-- CONTACT -->
+                <li>
+                    <a
+                        href="#contact"
+                        class="block
+                               px-6
+                               py-3
+                               text-[#021956]
+                               hover:bg-gray-100
+                               hover:text-[#f47419]
+                               transition"
+                    >
+                        CONTACT
+                    </a>
+                </li>
+
+
+                <!-- WHATSAPP -->
+                <li class="px-6 pt-4">
+
+                    <a
+                        href="https://wa.me/212665430041"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-full
+                               flex
+                               justify-center
+                               items-center
+                               gap-2
+                               bg-[#f78635]
+                               hover:bg-[#021956]
+                               text-white
+                               py-3
+                               rounded-lg
+                               transition"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        WhatsApp
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO CONTENT ================= -->
+   <div
+    class="relative z-10
+           flex items-center
+           
+           pt-24
+           
+           md:min-h-screen
+           md:pt-10
+           md:-mt-1
+           md:-my-12
+           sm:mt-12"
+           
+>
+
+        <div
+            class="max-w-xl
+                   ml-6
+                   lg:ml-16"
+        >
+
+            <!-- APEX -->
+            <h1
+                class="text-4xl
+                       md:text-5xl
+                       lg:text-6xl
+                       font-bold
+                       text-[#021956]"
+            >
+                APEX
+            </h1>
+
+
+            <!-- DELIVERY -->
+            <h1
+                class="text-4xl
+                       md:text-5xl
+                       lg:text-6xl
+                       font-bold
+                       text-[#f47419]"
+            >
+                DELIVERY
+            </h1>
+
+
+            <!-- SLOGAN -->
+            <p
+                class="mt-3
+                       text-xl
+                       md:text-2xl
+                       font-semibold
+                       text-[#021956]"
+            >
+                Nous livrons, vous gagnez du temps
+            </p>
+
+
+            <!-- ORANGE LINE -->
+            <p
+                class="font-bold
+                       text-[#f47419]"
+            >
+                _______
+            </p>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="mt-3
+                       text-lg
+                       lg:text-xl
+                       text-gray-700
+                       leading-8"
+            >
+                Livraison rapide et sécurisée partout
+                <br>
+                à Marrakech et ses environs
+            </p>
+
+
+            <!-- BUTTONS -->
+            <div
+                class="mt-8
+                       flex
+                       flex-col
+                       sm:flex-row
+                       gap-4"
+            >
+
+                <!-- COMMANDER -->
+                <a
+                    href="#contact"
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+                           bg-[#f78635]
+                           text-white
+                           px-7
+                           py-3
+                           rounded-xl
+                           hover:bg-[#021956]
+                           transition-all
+                           duration-300"
+                >
+
+                    <i class="fa-solid fa-motorcycle"></i>
+
+                    Commander maintenant
+
+                </a>
+
+
+                <!-- APPELER -->
+                <a
+                    href="tel:0665430041"
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+                           border-2
+                           border-[#021956]
+                           text-[#021956]
+                           px-7
+                           py-3
+                           rounded-xl
+                           hover:bg-[#021956]
+                           hover:text-white
+                           transition-all
+                           duration-300"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Nous appeler
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<!-- <script>
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuBtn.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("hidden");
+
+        if (mobileMenu.classList.contains("hidden")) {
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+
+        } else {
+
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+
+        }
+
+    });
+
+
+    // Fermer le menu après avoir cliqué sur un lien
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileMenu.classList.add("hidden");
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+
+        });
+
+    });
+
+
+    // Navbar background au scroll
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 50) {
+
+            navbar.classList.add(
+                "bg-white/95",
+                "backdrop-blur-md",
+                "shadow-md"
+            );
+
+        } else {
+
+            navbar.classList.remove(
+                "bg-white/95",
+                "backdrop-blur-md",
+                "shadow-md"
+            );
+
+        }
+
+    });
+
+</script> -->
+
+
+
+    <section class="relative -mt-10 z-20 max-w-6xl mx-auto px-4">
+        <!-- Features -->
+        <div class="bg-[#07244c] rounded-[30px] overflow-hidden">
+
+            <div class="grid grid-cols-2 lg:grid-cols-4">
+                <!-- RAPIDE -->
+                <div class="flex items-center gap-3 p-4 border-r border-b border-white/10">
+                    <i class="fa-regular fa-clock text-4xl text-[#f78635] shrink-0"></i>
+
+                    <div class="min-w-0">
+                        <h3 class="text-white font-bold text-sm sm:text-base">
+                            RAPIDE
+                        </h3>
+
+                        <p class="text-gray-300 text-[11px] sm:text-xs leading-4 break-words">
+                            Livraison express
+                            <br>
+                            en un temps record
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SECURISE -->
+                <div class="flex items-center gap-3 p-4 border-b border-white/10">
+                    <i class="fa-solid fa-shield-halved text-4xl text-[#f78635] shrink-0"></i>
+
+                    <div class="min-w-0">
+                        <h3 class="text-white font-bold text-sm sm:text-base">
+                            SÉCURISÉ
+                        </h3>
+
+                        <p class="text-gray-300 text-[11px] sm:text-xs leading-4 break-words">
+                            Vos colis entre
+                            <br>
+                            de bonnes mains
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LOCAL -->
+                <div class="flex items-center gap-3 p-4 border-r border-white/10">
+                    <i class="fa-solid fa-location-dot text-4xl text-[#f78635] shrink-0"></i>
+
+                    <div class="min-w-0">
+                        <h3 class="text-white font-bold text-sm sm:text-base">
+                            LOCAL
+                        </h3>
+
+                        <p class="text-gray-300 text-[11px] sm:text-xs leading-4 break-words">
+                            Partout où vous
+                            <br>
+                            avez besoin
+                        </p>
+                    </div>
+                </div>
+
+                <!-- DISPONIBLE -->
+                <div class="flex items-center gap-3 p-4">
+                    <i class="fa-solid fa-headset text-4xl text-[#f78635] shrink-0"></i>
+
+                    <div class="min-w-0">
+                        <h3 class="text-white font-bold text-sm sm:text-base">
+                            DISPONIBLE
+                        </h3>
+
+                        <p class="text-gray-300 text-[11px] sm:text-xs leading-4 break-words">
+                            Service client
+                            <br>
+                            à votre écoute
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Zones -->
+        <div class="bg-[#f78635] rounded-b-[30px] px-3 py-4">
+
+            <div class="flex justify-between items-center">
+
+                <div class="flex items-center gap-1 text-white text-[10px] sm:text-xs lg:text-base font-semibold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>MARRAKECH</span>
+                </div>
+
+                <div class="flex items-center gap-1 text-white text-[10px] sm:text-xs lg:text-base font-semibold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>ROUTE OURIKA</span>
+                </div>
+
+                <div class="flex items-center gap-1 text-white text-[10px] sm:text-xs lg:text-base font-semibold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>CHRIFIA</span>
+                </div>
+
+                <div class="flex items-center gap-1 text-white text-[10px] sm:text-xs lg:text-base font-semibold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>TAHANAOUT</span>
+                </div>
+
+                <div class="flex items-center gap-1 text-white text-[10px] sm:text-xs lg:text-base font-semibold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>ASNI</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="mx-5 py-12 bg-[#f8f9fb]">
+        <div class="max-w-7xl mx-auto px-2">
+
+            <div class="grid lg:grid-cols-10 items-center rounded-[35px] overflow-hidden ">
+
+                <!-- Left -->
+                <div class="lg:col-span-3 p-8 lg:p-12">
+
+                    <span class="uppercase tracking-[4px] text-[#F78635] font-semibold text-sm">
+                        COUVERTURE
+                    </span>
+
+                    <h2 class="mt-4 text-3xl lg:text-4xl font-bold leading-tight text-[#0F172A]">
+                        <p> Nous livrons là où
+                            vous en avez besoin</p>
+
+                    </h2>
+
+                    <div class="w-16 h-1 bg-[#F78635] rounded-full my-6"></div>
+
+                    <p class="text-gray-500 leading-8">
+                        Deux itinéraires, un seul objectif :
+                        votre satisfaction.
+                    </p>
+
+                    <button
+                        class="mt-4 bg-[#F78635] hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition">
+                        Voir toutes les zones
+                    </button>
+
+                </div>
+
+                <!-- Right -->
+                <div class="lg:col-span-7 flex justify-center items-center p-6 lg:p-10">
+
+                    <img src="images/zone.png" alt="Map" class="w-full max-w-4xl max-h-[380px] object-contain">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="py-8 bg-[#f8f9fb]">
+
+        <div class="max-w-7xl mx-auto px-15 mx-10">
+
+            <!-- Title -->
+            <div class="text-center mb-12">
+
+                <span class="inline-block px-4 py-2 rounded-full
+                         bg-orange-100 text-[#f78635]
+                         text-xs font-semibold">
+                    Nos services
+                </span>
+
+                <h2 class="mt-4 text-3xl md:text-4xl font-bold text-[#07244c]">
+                    Solutions de livraison complètes
+                </h2>
+
+                <p class="mt-3 text-sm md:text-base text-gray-500">
+                    Des solutions adaptées à tous vos besoins logistiques
+                </p>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+
+
+                <!-- STOCKAGE -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-boxes-stacked
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Stockage
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Espaces de stockage sécurisés et climatisés pour vos colis.
+                        Gestion professionnelle de votre inventaire.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Espaces climatisés
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Surveillance 24/7
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Gestion d'inventaire
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- EMBALLAGE -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-box-open
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Emballage
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Service d'emballage professionnel pour garantir la sécurité
+                        de vos produits pendant le transport.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Matériaux premium
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Protection optimale
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Options écologiques
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- RAMASSAGE -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-truck-pickup
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Ramassage
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Service de collecte à domicile pour vous faciliter
+                        l'expédition de vos colis.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Collecte programmée
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Service ponctuel
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Personnel qualifié
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- LIVRAISON -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-motorcycle
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Livraison
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Service de livraison rapide et fiable dans toutes
+                        les villes du Maroc.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Livraison express
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Couverture nationale
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Suivi en temps réel
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SUIVI -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-location-crosshairs
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Suivi
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Système de suivi avancé pour connaître l'état de vos
+                        livraisons en temps réel.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Mises à jour live
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Notifications SMS
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Historique détaillé
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SUPPORT -->
+                <div class="bg-white rounded-2xl border border-gray-100
+                        p-5 md:p-7 shadow-sm
+                        hover:shadow-lg hover:-translate-y-1
+                        transition-all duration-300">
+
+                    <div class="w-11 h-11 md:w-14 md:h-14
+                            rounded-full bg-orange-100
+                            flex items-center justify-center">
+
+                        <i class="fa-solid fa-headset
+                              text-[#f78635] text-lg md:text-xl"></i>
+
+                    </div>
+
+                    <h3 class="mt-5 text-base md:text-xl font-bold text-[#07244c]">
+                        Support
+                    </h3>
+
+                    <p class="mt-3 text-xs md:text-sm leading-5 text-gray-500">
+                        Service client disponible 24/7 pour répondre
+                        à toutes vos questions.
+                    </p>
+
+                    <ul class="mt-4 space-y-2 text-xs md:text-sm text-gray-500">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Support multilingue
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Réponse rapide
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check text-[#f78635] mr-2"></i>
+                            Assistance dédiée
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <div class="bg-[#081B3A] rounded-2xl mx-15 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-4">
+
+            <div class="flex items-center gap-3 p-6 border-r border-white/10">
+                <i class="fa-solid fa-box text-3xl"></i>
+                <div>
+                    <h3 class="text-[#F78635] text-3xl font-bold">25K+</h3>
+                    <p class="text-sm text-gray-300">Livraisons effectuées</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-6 border-r border-white/10">
+                <i class="fa-solid fa-circle-check text-3xl"></i>
+                <div>
+                    <h3 class="text-[#F78635] text-3xl font-bold">98%</h3>
+                    <p class="text-sm text-gray-300">Taux de réussite</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-6 border-r border-white/10">
+                <i class="fa-regular fa-clock text-3xl"></i>
+                <div>
+                    <h3 class="text-[#F78635] text-3xl font-bold">30min</h3>
+                    <p class="text-sm text-gray-300">Délai moyen</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-6">
+                <i class="fa-solid fa-users text-3xl"></i>
+                <div>
+                    <h3 class="text-[#F78635] text-3xl font-bold">12K+</h3>
+                    <p class="text-sm text-gray-300">Clients satisfaits</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-12">
+
+            <h2 class="text-center text-3xl font-bold text-[#0F172A] mb-12">
+                CE QUE DISENT NOS CLIENTS
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+              
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-orange-500"></i>
+
+                    <p class="mt-4 text-gray-600 leading-7">
+                        Service rapide et fiable.
+                        Je recommande Apex Delivery !
+                    </p>
+
+                    <div class="text-yellow-400 text-lg mt-4">
+                        ★★★★★
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6">
+                        <img src="images/othman.png" class="w-12 h-12 rounded-full object-cover">
+
+                        <h4 class="font-semibold">
+                            Youssef E.
+                        </h4>
+                    </div>
+                </div>
+
+              
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-orange-500"></i>
+
+                    <p class="mt-4 text-gray-600 leading-7">
+                        Très satisfait de la livraison,
+                        équipe professionnelle.
+                    </p>
+
+                    <div class="text-yellow-400 text-lg mt-4">
+                        ★★★★★
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6">
+                        <img src="images/Jamal - 10.jpeg" class="w-12 h-12 rounded-full object-cover">
+
+                        <h4 class="font-semibold">
+                            Salma B.
+                        </h4>
+                    </div>
+                </div>
+
+              
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-orange-500"></i>
+
+                    <p class="mt-4 text-gray-600 leading-7">
+                        Commande livrée en parfait état
+                        et dans les délais.
+                    </p>
+
+                    <div class="text-yellow-400 text-lg mt-4">
+                        ★★★★★
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6">
+                        <img src="images/ali.jpg" class="w-12 h-12 rounded-full object-cover">
+
+                        <h4 class="font-semibold">
+                            Omar A.
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+ -->
+
+
+
+
+
+
+
+
+    <!-- TARIFS -->
+    <section id="zones" class="py-20 bg-[#f8f9fb]">
+
+        <div class="max-w-7xl mx-auto px-5">
+
+            <!-- Title -->
+            <div class="text-center mb-10">
+
+                <span class="inline-block px-4 py-2 rounded-full
+                         bg-orange-100 text-[#f78635]
+                         text-sm font-semibold">
+                    Tarification
+                </span>
+
+                <h2 class="mt-4 text-3xl md:text-4xl font-bold text-[#07244c]">
+                    Tarifs transparents et compétitifs
+                </h2>
+
+                <p class="mt-3 text-gray-500">
+                    Découvrez nos tarifs de livraison selon votre zone.
+                </p>
+
+            </div>
+
+
+            <!-- 3 TARIFS INLINE -->
+            <div class="grid mx-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Marrakech -->
+                <div class="bg-white rounded-3xl border border-gray-100
+                        p-6 shadow-sm hover:shadow-lg
+                        transition duration-300">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-12 h-12 rounded-xl bg-orange-100
+                                flex items-center justify-center">
+
+                            <i class="fa-solid fa-location-dot text-[#F78635] text-xl"></i>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#303030]">
+                            Route Ourika
+                        </h3>
+
+                    </div>
+
+                    <div class="mt-6 bg-[#f7f8fa] text-[] rounded-xl py-8 text-center">
+
+                        <h2 class="text-4xl font-bold text-[#F78635]">
+                            15 DH
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-500">
+                            Prix de livraison
+                        </p>
+
+                    </div>
+
+                    <div class="mt-6 space-y-3 text-gray-500 text-sm">
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-[#F78635]"></i>
+                            Délai : 0 jours
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-square-check text-[#F78635]"></i>
+                            Livraison assurée
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Route Ourika -->
+                <div class="bg-white rounded-3xl border border-gray-100
+                        p-6 shadow-sm hover:shadow-lg
+                        transition duration-300">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-12 h-12 rounded-xl bg-orange-100
+                                flex items-center justify-center">
+
+                            <i class="fa-solid fa-location-dot text-[#F78635] text-xl"></i>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#303030]">
+                            Chrifia
+                        </h3>
+
+                    </div>
+
+                    <div class="mt-6 bg-[#f7f8fa] rounded-xl py-8 text-center">
+
+                        <h2 class="text-4xl font-bold text-[#F78635]">
+                            15 DH
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-500">
+                            Prix de livraison
+                        </p>
+
+                    </div>
+
+                    <div class="mt-6 space-y-3 text-gray-500 text-sm">
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-[#F78635]"></i>
+                            Délai : 0 jours
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-square-check text-[#F78635]"></i>
+                            Livraison assurée
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Chrifia -->
+                <div class="bg-white rounded-3xl border border-gray-100
+                        p-6 shadow-sm hover:shadow-lg
+                        transition duration-300">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-12 h-12 rounded-xl bg-orange-100
+                                flex items-center justify-center">
+
+                            <i class="fa-solid fa-location-dot text-[#F78635] text-xl"></i>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#303030]">
+                            Tahanaout
+                        </h3>
+
+                    </div>
+
+                    <div class="mt-6 bg-[#f7f8fa] rounded-xl py-8 text-center">
+
+                        <h2 class="text-4xl font-bold text-[#F78635]">
+                            15 DH
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-500">
+                            Prix de livraison
+                        </p>
+
+                    </div>
+
+                    <div class="mt-6 space-y-3 text-gray-500 text-sm">
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-[#F78635]"></i>
+                            Délai : 0 jours
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-square-check text-[#F78635]"></i>
+                            Livraison assurée
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Chrifia -->
+                <div class="bg-white rounded-3xl border border-gray-100
+                        p-6 shadow-sm hover:shadow-lg
+                        transition duration-300">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-12 h-12 rounded-xl bg-orange-100
+                                flex items-center justify-center">
+
+                            <i class="fa-solid fa-location-dot text-[#F78635] text-xl"></i>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold text-[#303030]">
+                            Asni
+                        </h3>
+
+                    </div>
+
+                    <div class="mt-6 bg-[#f7f8fa] rounded-xl py-8 text-center">
+
+                        <h2 class="text-4xl font-bold text-[#F78635]">
+                            18 DH
+                        </h2>
+
+                        <p class="mt-2 text-sm text-gray-500">
+                            Prix de livraison
+                        </p>
+
+                    </div>
+
+                    <div class="mt-6 space-y-3 text-gray-500 text-sm">
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-[#F78635]"></i>
+                            Délai : 0 jours
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fa-regular fa-square-check text-[#F78635]"></i>
+                            Livraison assurée
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="mx-8 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="grid lg:grid-cols-5 gap-8">
+
+                <!-- FAQ -->
+                <div class="lg:col-span-2  rounded-3xl  ">
+
+                    <p class="text-orange-500 uppercase font-semibold tracking-wider text-sm">
+                        Support
+                    </p>
+
+                    <h2 class="text-xl font-bold text-slate-900 mt-2 mb-8">
+                        Questions fréquentes <br>
+                        <p class="font-bold  text-orange-500">
+                            _______
+
+                        </p>
+                    </h2>
+
+
+
+                    <div class="space-y-4 -mt-4">
+
+                        <details class="group border rounded-xl">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 font-medium">
+                                Quels sont les délais de livraison ?
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+
+                            <p class="px-5 pb-5 text-gray-600">
+                                Nous livrons généralement entre 10 minutes et 5 heures, selon la zone de livraison et la distance.
+                            </p>
+                        </details>
+
+                        <details class="group border rounded-xl">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 font-medium">
+                                Dans quelles zones livrez-vous ?
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+
+                            <p class="px-5 pb-5 text-gray-600">
+                                Marrakech, Tahanaout, Asni, Route Ourika...
+                            </p>
+                        </details>
+
+                        <details class="group border rounded-xl">
+                            <summary class="flex justify-between items-center cursor-pointer p-2 font-medium">
+                                Comment suivre ma commande ?
+                                <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                            </summary>
+
+                            <p class="px-5 pb-5 text-gray-600">
+                                Vous pouvez suivre l'état de votre commande à tout moment.
+                            </p>
+                        </details>
+
+                    </div>
+
+                    <a href="#" class="inline-block mt-8 text-orange-500 font-semibold hover:underline">
+                        Voir toutes les questions →
+                    </a>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="lg:col-span-3  rounded-3xl  ">
+
+                    <div class="grid lg:grid-cols-3 gap-4">
+
+                        <!-- Infos -->
+                        <div>
+
+                            <p class="text-orange-500 uppercase text-sm font-semibold">
+                                Contact
+                            </p>
+
+                            <h2 class="text-xl  font-bold mt-2 mb-8">
+                                Contactez-nous
+                                <br>
+                                <p class="font-bold  text-orange-500">
+                                    _______
+
+                                </p>
+                            </h2>
+
+                            <div class="space-y-4 -mt-4">
+
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+                                        <i class="fa-brands fa-whatsapp text-green-900"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="font-semibold text-[11px] ">WhatsApp</p>
+                                        <p class="text-gray-500 text-[12px]">+212 6 65 43 00 41</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+                                        <i class="fa-solid fa-phone text-orange-500"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="font-semibold text-[11px]">Téléphone</p>
+                                        <p class="text-gray-500 text-[12px]">+212 6 65 43 00 41</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                                        <i class="fa-solid fa-envelope text-blue-600"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="font-semibold text-[11px]">Email</p>
+                                        <p class="text-gray-500 text-[12px]">
+                                            contact@apexdelivery.ma
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+                                        <i class="fa-solid fa-location-dot text-red-500"></i>
+                                    </div>
+
+                                    <div>
+                                        <p class="font-semibold text-[11px]">Adresse</p>
+                                        <p class="text-gray-500 text-[12px]">
+                                            Marrakech, Maroc
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Form -->
+                        <div>
+
+                            <form class="space-y-4">
+
+                                <input type="text" placeholder="Votre nom"
+                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500">
+
+                                <input type="email" placeholder="Votre email"
+                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500">
+
+                                <textarea rows="5" placeholder="Votre message"
+                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+
+                                <button
+                                    class="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-xl py-3 font-semibold transition">
+                                    Envoyer le message
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                        <!-- Map -->
+                        <div class="mb-[90px] ">
+
+                            <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_LINK" width="100%"
+                                height="450" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+                            </iframe>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+<footer class="bg-[#071a33] text-white mt-6">
+
+        <div class="max-w-7xl mx-auto px-6 md:px-10 py-14">
+
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+
+                <!-- LOGO -->
+                <div>
+
+                    <img src="images/logo1.png" alt="APEX Delivery" class="w-30 -mb-6 -mt-8 brightness-0 invert">
+
+                    <p class="text-gray-300 text-sm leading-7 max-w-xs">
+                        Votre partenaire de confiance pour la livraison
+                        rapide, sûre et professionnelle à Marrakech
+                        et ses environs.
+                    </p>
+
+                    <!-- Social -->
+                    <div class="flex gap-3 mt-6">
+
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10
+                              flex items-center justify-center
+                              hover:bg-[#f78635] transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10
+                              flex items-center justify-center
+                              hover:bg-[#f78635] transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10
+                              flex items-center justify-center
+                              hover:bg-[#f78635] transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LIENS RAPIDES -->
+                <div>
+
+                    <h3 class="text-lg font-bold mb-6">
+                        Liens rapides
+                    </h3>
+
+                    <ul class="space-y-4 text-sm text-gray-300">
+
+                        <li>
+                            <a href="#" class="hover:text-[#f78635] transition">
+                                Accueil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services" class="hover:text-[#f78635] transition">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#zones" class="hover:text-[#f78635] transition">
+                                Zones
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="hover:text-[#f78635] transition">
+                                À propos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="hover:text-[#f78635] transition">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SERVICES -->
+                <div>
+
+                    <h3 class="text-lg font-bold mb-6">
+                        Services
+                    </h3>
+
+                    <ul class="space-y-4 text-sm text-gray-300">
+
+                        <li>Livraison de colis</li>
+
+                        <li>Livraison de repas</li>
+
+                        <li>Livraison professionnelle</li>
+
+                        <li>Livraison express</li>
+
+                        <li>Suivi de commande</li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div>
+
+                    <h3 class="text-lg font-bold mb-6">
+                        Contact
+                    </h3>
+
+                    <div class="space-y-5 text-sm text-gray-300">
+
+                        <!-- Phone -->
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-phone text-[#f78635]"></i>
+
+                            <a href="tel:0665430041" class="hover:text-[#f78635] transition">
+                                0665 43 00 41
+                            </a>
+
+                        </div>
+
+
+                        <!-- WhatsApp -->
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-brands fa-whatsapp text-[#f78635]"></i>
+
+                            <a href="https://wa.me/212665430041" class="hover:text-[#f78635] transition">
+                                WhatsApp
+                            </a>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-envelope text-[#f78635]"></i>
+
+                            <span>
+                                contact@apexdelivery.ma
+                            </span>
+
+                        </div>
+
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-3">
+
+                            <i class="fa-solid fa-location-dot text-[#f78635]"></i>
+
+                            <span>
+                                Marrakech, Maroc
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINE -->
+            <div class="border-t border-white/10 mt-12 pt-6">
+
+                <div class="flex flex-col md:flex-row
+                        items-center justify-between
+                        gap-3 text-sm text-gray-400">
+
+                    <p>
+                        © 2026 APEX Delivery. Tous droits réservés.
+                    </p>
+
+                    <div class="flex gap-5">
+
+                        <a href="#" class="hover:text-white transition">
+                            Politique de confidentialité
+                        </a>
+
+                        <a href="#" class="hover:text-white transition">
+                            Conditions générales
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+
+            menu.classList.toggle('hidden');
+
+        });
+
+   
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            navbar.classList.add(
+                "bg-white/30",
+                "backdrop-blur-md",
+                "shadow-md"
+            );
+
+        } else {
+
+            navbar.classList.remove(
+                "bg-white/96",
+                "backdrop-blur-md",
+                "shadow-md"
+            );
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
