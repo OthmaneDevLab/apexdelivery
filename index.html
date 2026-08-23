@@ -2226,23 +2226,51 @@
                         <!-- Form -->
                         <div>
 
-                            <form class="space-y-4">
+                           <form
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    class="space-y-4"
+>
 
-                                <input type="text" placeholder="Votre nom"
-                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500">
+    <input
+        type="hidden"
+        name="access_key"
+        value="cd82c4db-dc72-4f3e-812f-56e0adf499a1"
+    >
 
-                                <input type="email" placeholder="Votre email"
-                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500">
+    <input
+        type="text"
+        name="name"
+        placeholder="Votre nom"
+        required
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500"
+    >
 
-                                <textarea rows="5" placeholder="Votre message"
-                                    class="w-full rounded-sm border p-1 outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+    <input
+        type="email"
+        name="email"
+        placeholder="Votre email"
+        required
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500"
+    >
 
-                                <button
-                                    class="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-xl py-3 font-semibold transition">
-                                    Envoyer le message
-                                </button>
+    <textarea
+        name="message"
+        rows="5"
+        placeholder="Votre message"
+        required
+        class="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none resize-none focus:ring-2 focus:ring-orange-500"
+    ></textarea>
 
-                            </form>
+    <button
+        type="submit"
+        class="w-full bg-[#F78635] hover:bg-[#021956] text-white rounded-xl py-3 font-semibold transition"
+    >
+        <i class="fa-solid fa-paper-plane mr-2"></i>
+        Envoyer le message
+    </button>
+
+</form>
 
                         </div>
 
