@@ -11,11 +11,22 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo1.png">
     <title>Apex Delivery</title>
 </head>
 
 <body style="font-family: 'Montserrat', sans-serif; background-color: #f8f9fb;">
+<!-- PRELOADER -->
 
+<div id="preloader" class="preloader">
+
+    <img
+        src="images/logo1.png"
+        alt="APEX Delivery"
+        class="preloader-logo"
+    >
+
+</div>
 <!-- =========================================================
      ANIMATION CSS
 ========================================================= -->
@@ -137,7 +148,72 @@
   border-radius: 50%;
   z-index: -1;
 }
+/* =========================
+   PRELOADER
+========================= */
 
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    animation: preloaderHide 0.8s ease forwards;
+    animation-delay: 1.8s;
+}
+
+
+.preloader-logo {
+    width: 180px;
+    height: auto;
+
+    animation: logoLoading 1.2s ease-in-out infinite;
+}
+
+
+/* Logo animation */
+
+@keyframes logoLoading {
+
+    0% {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+
+}
+
+
+/* Hide preloader */
+
+@keyframes preloaderHide {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}
 </style>
 
 
